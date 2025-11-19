@@ -1,0 +1,43 @@
+@import "tailwindcss";
+/* @plugin "daisyui"; */
+
+@theme {
+  --color-primary: #2a4540;
+  --color-secondary: #ede6db;
+  --color-tertiary: #b29f80;
+  --breakpoint-xxs: 320px;
+  --breakpoint-xs: 420px;
+  --breakpoint-xss: 500px;
+}
+
+.button-1 {
+  @apply flex items-center justify-center gap-x-2 px-6 py-3 bg-secondary  text-primary  rounded-full font-bold text-xl relative overflow-hidden  shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 ease-in-out before:h-full before:w-0 before:bg-primary before:transition-all before:duration-600 hover:text-secondary hover:shadow-primary hover:before:left-0 hover:before:w-full before:rounded-full;
+}
+.button-2 {
+  @apply flex items-center border border-secondary justify-center gap-x-2 px-10 py-3 bg-secondary  text-primary  rounded-full font-bold text-xl relative overflow-hidden  shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 ease-in-out before:h-full before:w-0 before:bg-primary before:transition-all before:duration-600 hover:text-secondary hover:shadow-secondary/10 hover:before:left-0 hover:before:w-full before:rounded-full;
+}
+.button-3 {
+  @apply flex items-center border border-secondary justify-center gap-x-2 px-5 py-3 bg-primary  text-secondary  rounded-full font-bold text-xl relative overflow-hidden  shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 ease-in-out before:h-full before:w-0 before:bg-secondary before:transition-all before:duration-600 hover:text-primary hover:shadow-secondary/10 hover:before:left-0 hover:before:w-full before:rounded-full;
+}
+.button-4 {
+  @apply flex items-center justify-center gap-x-2 px-6 py-3 bg-secondary  text-primary  rounded-full font-bold text-xl relative overflow-hidden  shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 ease-in-out before:h-full before:w-0 before:bg-primary before:transition-all before:duration-600 hover:text-secondary hover:shadow-primary hover:before:left-0 hover:before:w-full before:rounded-full;
+}
+
+#navList::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+#navList:hover::after {
+  width: 100%;
+}
+
+.hover {
+  @apply h-0 w-full bg-linear-to-b from-transparent to-black rounded-4xl absolute left-0 bottom-0 overflow-hidden flex flex-col items-center justify-center py-0 px-10 text-center text-sm duration-500 transition-all ease-in-out group-hover:h-full;
+}
